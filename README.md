@@ -35,5 +35,4 @@ abandoned work-in-progress whose first cell is truncated mid-edit (an
 unterminated string literal), and `box.ipynb` is a scratchpad. Treat the whole
 directory as an honest archive entry, not a project to maintain.
 
-**License:** no LICENSE file present. As the owner's own work, add an explicit
-license (e.g. MIT) before publishing anything; until then, all rights reserved.
+**License:** AGPL-3.0-only; see [`LICENSE`](LICENSE).
