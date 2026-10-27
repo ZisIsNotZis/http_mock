@@ -7,14 +7,15 @@ inspectable instead of rotting. Copied — the original was not modified.
 
 ## Status
 
-See `README.md` for what it is and an honest status line (`deprecated (<year> era)
-- kept as an archive` where applicable).
+See `README.md` (English) and `README.zh-CN.md` (Simplified Chinese) for what it
+is, how to run it, and an honest status line.
 
 ## Evidence
 
 - Source: `~/my/http_mock` (private archive), copied verbatim except for junk
   binaries, caches and any file that tripped the credential scanner.
-- `README.md` in this repo documents what it is, how to run it and its limits.
+- `README.md` and `README.zh-CN.md` document what it is, how to run it and its
+  limits. `assets/logo.svg` is the hand-drawn project mark.
 
 ## Boundaries
 

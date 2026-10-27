@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 200" role="img" aria-labelledby="logo-title logo-desc">
+  <title id="logo-title">http_mock</title>
+  <desc id="logo-desc">A request and a response passing through a recurrent sequence-to-sequence model.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#111722"/>
+      <stop offset="1" stop-color="#0a0d13"/>
+    </linearGradient>
+    <linearGradient id="wire" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#3fb950"/>
+      <stop offset="0.5" stop-color="#a371f7"/>
+      <stop offset="1" stop-color="#58a6ff"/>
+    </linearGradient>
+    <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0 0 L10 5 L0 10 Z" fill="#8b949e"/>
+    </marker>
+    <marker id="loop-arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M0 0 L10 5 L0 10 Z" fill="#a371f7"/>
+    </marker>
+  </defs>
+
+  <rect x="1" y="1" width="758" height="198" rx="28" fill="url(#bg)" stroke="#30363d" stroke-width="2"/>
+
+  <!-- request terminal -->
+  <rect x="36" y="32" width="232" height="136" rx="16" fill="#161b22" stroke="#238636" stroke-width="2"/>
+  <circle cx="56" cy="54" r="4" fill="#ff7b72"/>
+  <circle cx="72" cy="54" r="4" fill="#d29922"/>
+  <circle cx="88" cy="54" r="4" fill="#3fb950"/>
+  <text x="54" y="84" fill="#8b949e" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="10" letter-spacing="2">REQUEST</text>
+  <text x="54" y="112" fill="#7ee787" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="17">GET /user/3</text>
+  <text x="54" y="138" fill="#7ee787" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="17">PATCH /item/7</text>
+
+  <!-- response terminal -->
+  <rect x="492" y="32" width="232" height="136" rx="16" fill="#161b22" stroke="#1f6feb" stroke-width="2"/>
+  <circle cx="512" cy="54" r="4" fill="#ff7b72"/>
+  <circle cx="528" cy="54" r="4" fill="#d29922"/>
+  <circle cx="544" cy="54" r="4" fill="#3fb950"/>
+  <text x="510" y="84" fill="#8b949e" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="10" letter-spacing="2">RESPONSE</text>
+  <text x="510" y="112" fill="#79c0ff" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="17">200 OK</text>
+  <text x="510" y="138" fill="#79c0ff" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="17">{"name":"user3"}</text>
+
+  <!-- wires -->
+  <line x1="272" y1="100" x2="332" y2="100" stroke="url(#wire)" stroke-width="3" stroke-linecap="round" marker-end="url(#arrow)"/>
+  <line x1="428" y1="100" x2="488" y2="100" stroke="url(#wire)" stroke-width="3" stroke-linecap="round" marker-end="url(#arrow)"/>
+
+  <!-- recurrent model -->
+  <path d="M344 62 C340 36 420 36 416 62" fill="none" stroke="#a371f7" stroke-width="3" stroke-linecap="round" marker-end="url(#loop-arrow)"/>
+  <circle cx="380" cy="100" r="42" fill="#161b22" stroke="#8957e5" stroke-width="2"/>
+  <text x="380" y="104" text-anchor="middle" fill="#d2a8ff" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="20" font-weight="700">GRU</text>
+  <text x="380" y="122" text-anchor="middle" fill="#8b949e" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="10">seq2seq</text>
+
+  <!-- caption -->
+  <text x="380" y="188" text-anchor="middle" fill="#8b949e" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="11" letter-spacing="2">SYNTHETIC TRACES · LEARNED BY IMITATION</text>
+</svg>
