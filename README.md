@@ -12,7 +12,7 @@
 
 <p align="center">
   Synthetic HTTP and key-value protocol traces, plus a character-level seq2seq trained
-  from scratch to imitate them. No dataset, no real server, no pretrained weights.
+  from scratch to imitate them. No external dataset, no real server, no pretrained weights.
 </p>
 
 <p align="center">
@@ -55,8 +55,8 @@ mathadd a 4
 ls
 ```
 
-The generated responses are JSON objects for the HTTP mock and short `ok ...`
-lines for the key-value mock. The model never talks to a socket.
+The HTTP mock returns a status line plus a JSON body for object reads and writes;
+the key-value mock returns short `ok ...` lines. The model never talks to a socket.
 
 **No outputs are saved in this repository.** There are no recorded loss curves,
 accuracy numbers, checkpoints, or evaluation split, so the notebooks do not claim
@@ -96,10 +96,11 @@ response text ◄── argmax over vocabulary ◄── GRU decoder ◄┘
 ```
 
 The target response is fed to the decoder during training (teacher forcing), with
-random token dropout on its embeddings. `http_mock_3.ipynb` adds two reconstruction
-heads: one rebuilds the request, one rebuilds the response, so the latent state is
-pushed to preserve both sides of the exchange. `Seq2Rnn2Seq` also treats the
-multi-client request/response grid as a 2-D sequence and runs an RNN across it.
+random token dropout on its embeddings. `http_mock_3.ipynb` adds two auxiliary
+reconstruction losses: one rebuilds the request, one rebuilds the response, so the
+latent state is pushed to preserve both sides of the exchange. `Seq2Rnn2Seq` also
+treats the multi-client request/response grid as a 2-D sequence and runs an RNN
+across it.
 
 ## How to develop
 
