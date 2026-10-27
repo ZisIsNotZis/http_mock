@@ -55,8 +55,10 @@ mathadd a 4
 ls
 ```
 
-The HTTP mock returns a status line plus a JSON body for object reads and writes;
-the key-value mock returns short `ok ...` lines. The model never talks to a socket.
+The HTTP mock answers reads and writes with a status line plus a JSON body;
+`DELETE` answers with the status line alone, and an unknown object gets
+`HTTP/1.0 404` with no body. The key-value mock returns short `ok ...` lines.
+The model never talks to a socket.
 
 **No outputs are saved in this repository.** There are no recorded loss curves,
 accuracy numbers, checkpoints, or evaluation split, so the notebooks do not claim

@@ -52,7 +52,8 @@ mathadd a 4
 ls
 ```
 
-HTTP mock 的读取和写入响应是状态行加 JSON 体；键值 mock 返回简短的 `ok ...` 行。
+HTTP mock 的读取和写入响应是状态行加 JSON 体；`DELETE` 只返回状态行，
+访问不存在的对象返回不带响应体的 `HTTP/1.0 404`。键值 mock 返回简短的 `ok ...` 行。
 模型从不接触 socket。
 
 **仓库里没有保存任何输出。** 没有记录的 loss 曲线、准确率、checkpoint
